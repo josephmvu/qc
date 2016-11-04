@@ -1,0 +1,16 @@
+<h1>Edit Page</h1>
+<p>Create Prefilled Form</p>
+
+<%= JSON.stringify(student) %>
+
+<form action="/students/<%= student.id %>?_method=PUT" method="POST">
+    <input type="text" name="student[firstName]" value="<%= student.firstName %>" placeholder="first">
+    <input type="text" name="student[lastName]" value="<%= student.lastName %>" placeholder="last">
+    <input type="text" name="student[school]" value="<%= student.school %>" placeholder="school">
+    <input type="number" name="student[grade]" value="<%= student.grade %>" placeholder="grade">
+    <button>Update</button>
+</form>
+
+<form action="/students/<%= student.id %>?_method=DELETE" method="POST">
+    <button>Delete</button>
+</form>

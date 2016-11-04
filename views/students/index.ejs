@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>School</th>
+            <th>Grade</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% for(var i = 0; i < students.length; i++) { %>
+        <tr>
+            <td><%= students[i].id %></td>
+            <td><%= students[i].firstName %></td>
+            <td><%= students[i].lastName %></td>
+            <td><%= students[i].school %></td>
+            <td><%= students[i].grade %></td>
+            <td><a href="/students/<%= students[i].id %>/edit">Edit</a></td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
